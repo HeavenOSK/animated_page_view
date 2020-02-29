@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-typedef AnimatedLayoutPageBuilder = Widget Function(
+typedef AnimatedPageBuilder = Widget Function(
     int pageIndex, double pageValue, Widget child);
-typedef _PageViewTransitionBuilder = Widget Function(
+typedef PageViewTransitionBuilder = Widget Function(
     int pageIndex, double pageValue, Widget child);
 
 class AnimatedPageView extends StatefulWidget {
@@ -49,7 +49,7 @@ class AnimatedPageView extends StatefulWidget {
 
   final int itemCount;
 
-  final _PageViewTransitionBuilder transitionBuilder;
+  final PageViewTransitionBuilder transitionBuilder;
 
   final Axis scrollDirection;
 
@@ -63,7 +63,7 @@ class AnimatedPageView extends StatefulWidget {
 
   final DragStartBehavior dragStartBehavior;
 
-  final AnimatedLayoutPageBuilder pageBuilder;
+  final AnimatedPageBuilder pageBuilder;
 
   static Widget _defaultAnimatedLayoutPageBuilder(
           int pageIndex, double pageValue, Widget child) =>
