@@ -1,5 +1,6 @@
-import 'package:example/pages/cubic_example.dart';
 import 'package:flutter/material.dart';
+
+import 'examples/cubic_example.dart';
 
 void main() => runApp(MyApp());
 
